@@ -35,4 +35,5 @@ jobs:
     - name: Run build script
       env:
         DOTNET_NUGET_AUDIT: false
-      run: chmod +x ./build.sh && ./build.sh
+    
+      run: dotnet run --project build/build.csproj -- "$@"

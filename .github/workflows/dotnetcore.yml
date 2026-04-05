@@ -33,4 +33,4 @@ jobs:
         dotnet-version: '9.0.x'
     
     - name: run build script
-      run: chmod +x ./build.sh && ./build.sh
+      run: dotnet run --project build/build.csproj -- "$@"
